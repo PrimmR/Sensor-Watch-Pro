@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) <#year#> <#author_name#>
+ * Copyright (c) 2025 PrimmR
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +27,10 @@
 #include "movement.h"
 
 /*
- * A DESCRIPTION OF YOUR WATCH FACE
+ * PRIDE FACE
  *
- * and a description of how use it
+ * Press the light button to make the LED cycle through a rainbow gradient
+ * Only works with boards that have all 3 colours of LED
  *
  */
 
