@@ -90,7 +90,7 @@ bool pride_face_loop(movement_event_t event, void *context) {
                 watch_display_text(WATCH_POSITION_BOTTOM, " Pride");
             #else
                 watch_display_text(WATCH_POSITION_TOP_LEFT, "No");
-                watch_display_text_with_fallback(WATCH_POSITION_BOTTOM, " LED", " led");
+                watch_display_text_with_fallback(WATCH_POSITION_BOTTOM, " LED", " LEd");
             #endif
             break;
         case EVENT_TICK:
@@ -106,7 +106,7 @@ bool pride_face_loop(movement_event_t event, void *context) {
                 }
             #else
                 watch_display_text(WATCH_POSITION_TOP_LEFT, "No");
-                watch_display_text(WATCH_POSITION_BOTTOM, " LED");
+                watch_display_text_with_fallback(WATCH_POSITION_BOTTOM, " LED", " LEd");
             #endif
             break;
         }
