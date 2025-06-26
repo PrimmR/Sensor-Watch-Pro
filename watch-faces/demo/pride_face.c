@@ -30,7 +30,7 @@
 #include "watch_slcd.h"
 #include "watch_common_display.h"
 
-void _cycle_leds(pride_state_t *state) {
+inline static void _pride_face_cycle_leds(pride_state_t *state) {
     if (state->col.red == 0xF && state->col.green == 0xF)
         state->col.red--;
     else if (state->col.green == 0xF && state->col.blue == 0xF)
@@ -98,7 +98,7 @@ bool pride_face_loop(movement_event_t event, void *context) {
             #if defined(WATCH_BLUE_TCC_CHANNEL) && defined(WATCH_GREEN_TCC_CHANNEL)
                 watch_display_text(WATCH_POSITION_BOTTOM, " Pride");
                 if (state->active) {
-                    _cycle_leds(state);
+                    _pride_face_cycle_leds(state);
                     watch_set_indicator(WATCH_INDICATOR_SIGNAL);
                 } else {
                     movement_force_led_off();
